@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="scripts.js" defer></script>
+    <title>Contact Us - Programming Workshop</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Feel free to reach out to us!</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workshop.html">Workshop Details</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="contact-form">
+        <div class="container">
+            <form id="contactForm" action="#" method="post" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="successMessage" style="display: none; color: green; margin-top: 10px;">
+                Thank you for your message! We'll get back to you soon.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-text">
+            <p>&copy; 2023 Programming Workshop. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

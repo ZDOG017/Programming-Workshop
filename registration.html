@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="scripts.js" defer></script>
+  <title>Registration - Programming Workshop</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Registration</h1>
+            <p>Register to our amazing workshop events!</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workshop.html">Workshop Details</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <table border="1" class="styled-table">
+    <colgroup>
+      <col style="width: 433px">
+      <col style="width: 273px">
+      <col style="width: 176px">
+      <col style="width: 317px">
+      <col style="width: 161px">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Participant type</th>
+        <th>Sessions</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="4">
+          <input type="radio" id="Presenter" name="participantType">
+          <label for="Presenter">Presenter</label>
+          <br>
+          <input type="radio" id="Audience" name="participantType">
+          <label for="Audience">Audience</label>
+        </td>
+        <td>
+          <input type="checkbox" id="session-1">
+          <label for="session-1">Session 1 - 20 euros</label>
+        </td>
+        <td rowspan="4">
+          <input type="date" id="startDate">
+        </td>
+        <td rowspan="4">
+          <input type="date" id="endDate">
+        </td>
+        <td>
+          <input type="text" id="cost-session-1" readonly>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" id="session-2">
+          <label for="session-2">Session 2 - 30 euros</label>
+        </td>
+        <td><input type="text" id="cost-session-2" readonly></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" id="session-3">
+          <label for="session-3">Session 3 - 40 euros</label>
+        </td>
+        <td><input type="text" id="cost-session-3" readonly></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" id="session-4">
+          <label for="session-4">Session 4 - 50 euros</label>
+        </td>
+        <td><input type="text" id="cost-session-4" readonly></td>
+      </tr>
+      <tr>
+        <td colspan="2">Total Cost</td>
+        <td colspan="2">
+          <button onclick="calculateCost()">Calculate</button>
+        </td>
+        <td id="totalCost">0 euros</td>
+      </tr>
+    </tbody>
+    </table>
+
+    <footer>
+        <div class="container footer-text">
+            <p>&copy; 2023 Programming Workshop. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
