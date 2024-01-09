@@ -19,14 +19,11 @@ function calculateCost() {
   
       if (sessionCheckbox.checked) {
         attendedSessions++;
-  
         const days = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
         const sessionCost = sessionCosts[`session-${i}`];
         const participantTypeCost = (participantType === "Presenter") ? 2 : 1;
-  
-        const sessionTotalCost = days * sessionCost * participantTypeCost;
+        const sessionTotalCost = ((participantTypeCost * sessionCost) + sessionCost) * days;
         sessionCostInput.value = `${sessionTotalCost} euros`;
-  
         totalCost += sessionTotalCost;
       } else {
         sessionCostInput.value = "";
